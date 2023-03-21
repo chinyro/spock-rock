@@ -1,21 +1,32 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
-html {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
+body,
+html  {
+  height: 100vh;
+  width: 100vw;
   margin: 0;
-  min-height: 100vh;
-  background: #efeded;
   font-family: Lato, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #ededed;
+  transition: all 1.5s;
+  font-size: 16px;
 }
 
 .game-container {
-  width: 530px;
+  width: 90vw;
+  padding: 2rem 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 31px;
   height: 600px;
   background: #ffffff;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
@@ -26,6 +37,7 @@ body {
   background: #189ca3;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  width: 95%;
   height: 100px;
   display: flex;
   justify-content: center;
