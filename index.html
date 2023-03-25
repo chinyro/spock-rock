@@ -11,17 +11,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.animate.min.css"/>
 </head>
 <body>
-    <div class="game-container"> <!-- main-header -->
-        <!-- Header -->
-        <div class="header">
-            <h1>Rock Paper Scissors Lizard Spock</h1>
+    <div class="main-header">
+        <div class="navbar">
+            <ul class="nav-ul">
+                <li class="first-li"> <a href="https://www.linkedin.com/in/partha-sarathi-muduli-1738921b9/" target="_blank"><button class="social-btn nav-btn-color nav-btn" title="Follow me on Linkedin"><ion-icon class="nav-icon" name="logo-linkedin"></ion-icon></button></a></li>
+                <li class="last-li"><p class="p-text p-color">Dark Mode</p><button class="nav-btn-color dark-mode nav-btn" title="change theme"><ion-icon class="icon nav-icon" name="sunny-outline"></ion-icon></button></li>
+            </ul>
         </div>
-        <div class="score-table">
-            <div id="user-label" class="badge">YOU</div>
-            <div id="computer-label" class="badge">ROBOT</div>
-            <span id="user-score">0</span> : <span id="computer-score">0</span>
-        </div>
-        <!-- Game Container -->
+    </div>
+    <div class="container container-light">
+        <header>
+            <div class="score-table">
+                <div id="user-label" class="badge">YOU</div>
+                <div id="computer-label" class="badge">ROBOT</div>
+                <span id="user-score">0</span> : <span id="computer-score">0</span>
+            </div>
+            <div class="result">
+                <p>Paper covers rock. You win!</p>
+            </div>
+        </header>
+
         <div class="main-part">
             <button title="Rock" onclick="clicked('Rock')"><i class="far fa-hand-rock"></i></button>
             <button title="Paper" onclick="clicked('Paper')"><i class="far fa-hand-paper"></i></button>
@@ -30,14 +39,53 @@
             <button title="Spock" onclick="clicked('Spock')"><i class="far fa-hand-spock"></i></button>
         </div>
         <div class="last-part">
-            <p class="choosing-part-comp p-light" id="computerChoice">Test1</p>
-            <p class="choosing-part-user p-light" id="userChoice">Test 1</p>
-            <p id="result">Result</p>
+            <p class="choosing-part-comp p-light" id="compChoice"></p>
+            <p class="choosing-part-user p-light" id="userChoice"></p>
+            <p id="result"></p>
         </div>
-        <!-- Try again -->
-        <button class="refresh" type="submit"  onClick="refreshPage()">Try Again!!</button>
 
-    <!-- Script -->
-    <script src="script.js" type="module"></script>
+        <!-- for rules -->
+
+       <!-- <div id="clickImage"><i class="fas fa-times"></i></div> -->
+        <!-- <button class="btn-grad" id="buttonClick">Rules</button> -->
+
+            
+        
+    </div>
+
+    <div class="footer">
+        <p>This game is made with <i class="fas fa-heart"></i> by <span><a href="https://www.linkedin.com/in/partha-sarathi-muduli-1738921b9/">Partha Sarathi Muduli</a></span></p>
+    </div>
+
+<!-- ! For popup message -->
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p class="popupText">The webpage is in <span>light mode</span>, You can also try the <span>dark mode</span> by clicking on the top right corner icon.</p>
+        <button class="close closeBtn">Ok</button>
+        </div >
+    </div>
+
+
+    <!-- ? For general popup message -->
+    <div id="generalPopup" class="general-popup">
+        <div class="blank-div"></div>
+        <div class="general-div">
+            <div class="popup-content-general">
+                <p class="genral-popup-text">You <span>Won</span> the match🥳</p>
+                <button class="close closeBtn general-close-btn">OK</button>
+            </div >
+        </div>
+    </div>
+
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/darkMode.js"></script>
+    <script src="./scripts/popup.js"></script>
+
+    <!-- for ionion icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
 </body>
 </html>
