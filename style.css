@@ -174,12 +174,12 @@ header {
 
 
 .score-table {
-  border: 5px solid #730068;
+  border: 5px solid #8b2781;
   border-radius: 4px;
   text-align: center;
   width: 200px;
   margin: 20px auto;
-  color: white;
+  color: rgb(170, 37, 214);
   font-size: 40px;
   padding: 15px 20px;
   font-family: 'Cantarell', sans-serif;
@@ -208,19 +208,6 @@ header {
   right: 10px;
 }
 
-.result {
-  font-size: 40px;
-  color: #8235ae;
-  position: absolute;
-  margin: 130px;
-  
-}
-
-.result > p {
-  text-align: center;
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
 .score p {
   font-weight: 500;

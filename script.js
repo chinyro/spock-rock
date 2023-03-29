@@ -5,6 +5,8 @@
 //Update the score
 
 const result = document.getElementById("result");
+const userChoice = document.getElementById("userChoice");
+const compChoice = document.getElementById("compChoice");
 
 let [comp_score, user_score] = [0,0];
 
@@ -46,12 +48,44 @@ let gameRules = {
     }
 }
 
-function clicked(input) {
+function clicked(user) {
     let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-    let randomNumber = Math.trunc(Math.random() * 5);
+    let randomNumber = Math.floor(Math.random() * 5);
     let comp_choice = choices[randomNumber];
-    console.log(randomNumber);
 
-    document.getElementById("userChoice").textContent = `Computer chose ${comp_choice.toUpperCase()}`; 
-    document.getElementById("compChoice").textContent = `You chose ${input.toUpperCase()}`;
+    userChoice.textContent = `Computer chose ${comp_choice.toUpperCase()}`; 
+    compChoice.textContent = `You chose ${user.toUpperCase()}`;
+
+    console.log('user', user, 'comp-choice', comp_choice);
+    switch(gameRules[comp_choice][user]) {
+        case 'win':
+            result.textContent = 'You win';
+            result.style.cssText = "background-color: rgb(128, 247, 128)";
+            user_score++;
+            break;
+        case 'lose':
+            result.textContent = 'You lose';
+            result.style.cssText = "background-color: rgb(240, 124, 124)";
+            comp_score++;
+            break;
+        case 'tie':
+            result.textContent = 'It is a Tie';
+            result.style.cssText = "background-color: rgb(102, 102, 102)";
+            break;
+    }
+    localStorage.setItem('userInputValue', JSON.stringify(user_score));
+    localStorage.setItem('compInputValue', JSON.stringify(comp_score));
+    
+    setLocalStorageData();
+    // console.log(localStorage.getItem('userInputValue'), localStorage.getItem('compInputValue'));
 }
+
+
+// ! implementing local storage
+const setLocalStorageData = () => {
+    document.getElementById('comp_score').innerHTML = localStorage.getItem('compInputValue');
+    document.getElementById('user_score').innerHTML = localStorage.getItem('userInputValue'); 
+  } 
+  setLocalStorageData();
+
+
