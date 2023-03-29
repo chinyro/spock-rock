@@ -4,7 +4,7 @@
 //Compare computer vs user choice
 //Update the score
 
-const result = document.getElementById('result');
+const result = document.getElementById("result");
 
 let [comp_score, user_score] = [0,0];
 
@@ -43,7 +43,15 @@ let gameRules = {
         Paper: 'lose',
         Spock: 'lose',
         Lizard: 'tie'
-    },
+    }
 }
 
-function
+function clicked(input) {
+    let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+    let randomNumber = Math.trunc(Math.random() * 5);
+    let comp_choice = choices[randomNumber];
+    console.log(randomNumber);
+
+    document.getElementById("userChoice").textContent = `Computer chose ${comp_choice.toUpperCase()}`; 
+    document.getElementById("compChoice").textContent = `You chose ${input.toUpperCase()}`;
+}

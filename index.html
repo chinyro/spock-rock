@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.animate.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.animate.min.css"/> -->
 </head>
 <body>
     <div class="main-header">
         <div class="navbar">
             <ul class="nav-ul">
-                <li class="first-li"> <a href="https://www.linkedin.com/in/partha-sarathi-muduli-1738921b9/" target="_blank"><button class="social-btn nav-btn-color nav-btn" title="Follow me on Linkedin"><ion-icon class="nav-icon" name="logo-linkedin"></ion-icon></button></a></li>
+                <li class="first-li"> <a href="" target="_blank"><button class="social-btn nav-btn-color nav-btn" title="Follow me on Linkedin"><ion-icon class="nav-icon" name="logo-linkedin"></ion-icon></button></a></li>
                 <li class="last-li"><p class="p-text p-color">Dark Mode</p><button class="nav-btn-color dark-mode nav-btn" title="change theme"><ion-icon class="icon nav-icon" name="sunny-outline"></ion-icon></button></li>
             </ul>
         </div>
@@ -23,7 +23,7 @@
         <header>
             <div class="score-table">
                 <div id="user-label" class="badge">YOU</div>
-                <div id="computer-label" class="badge">ROBOT</div>
+                <div id="computer-label" class="badge">COMPUTER</div>
                 <span id="user-score">0</span> : <span id="computer-score">0</span>
             </div>
         </header>
@@ -36,9 +36,9 @@
             <button title="Spock" onclick="clicked('Spock')"><i class="far fa-hand-spock"></i></button>
         </div>
         <div class="last-part">
-            <p class="choosing-part-comp p-light" id="compChoice">Computer choose Rock</p>
-            <p class="choosing-part-user p-light" id="userChoice">You choose Paper</p>
-            <p id="result">You Win</p>
+            <p class="choosing-part-comp p-light" id="compChoice"></p>
+            <p class="choosing-part-user p-light" id="userChoice"></p>
+            <p id="result"></p>
         </div>
 
         <!-- for rules -->
@@ -67,12 +67,11 @@
     </div> -->
 
 
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/darkMode.js"></script>
-    <script src="./scripts/popup.js"></script>
+    <script src="script.js"></script>
+
 
     <!-- for ionion icon -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     -->
 </body>
 </html>
