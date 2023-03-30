@@ -48,6 +48,26 @@ let gameRules = {
     }
 }
 
+function refreshPage() {
+    window.location.reload();
+ }
+
+//  function button() {
+//     button.disabled = false;
+//  }
+
+ function winCondition() {
+    if(user_score === 10) {
+        alert('GAME OVER - YOU WON!! You are the best, CONGRATULATIONS!!!');
+    } else if(comp_score === 10) {
+        alert('GAME OVER - Computer Wins, Maybe next time human!!!');
+    } 
+ }
+
+ function button() {
+    button.disabled = true;
+ }
+
 function clicked(user) {
     let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
     let randomNumber = Math.floor(Math.random() * 5);
@@ -72,20 +92,22 @@ function clicked(user) {
             result.textContent = 'It is a Tie';
             result.style.cssText = "background-color: rgb(102, 102, 102)";
             break;
-    }
-    localStorage.setItem('userInputValue', JSON.stringify(user_score));
-    localStorage.setItem('compInputValue', JSON.stringify(comp_score));
-    
-    setLocalStorageData();
-    // console.log(localStorage.getItem('userInputValue'), localStorage.getItem('compInputValue'));
+        }
+        winCondition();
+        localStorage.setItem('userInputValue', JSON.stringify(user_score));
+        localStorage.setItem('compInputValue', JSON.stringify(comp_score));
+        setLocalStorageData();
+
 }
 
 
-// ! implementing local storage
+//  local storage and updating score
 const setLocalStorageData = () => {
     document.getElementById('comp_score').innerHTML = localStorage.getItem('compInputValue');
     document.getElementById('user_score').innerHTML = localStorage.getItem('userInputValue'); 
   } 
-  setLocalStorageData();
+//   setLocalStorageData(); 
 
-
+  function refreshPage() {
+    window.location.reload();
+ }
