@@ -14,8 +14,7 @@ html {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-color: #f9c5d1;
-    background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
-  /* background: #ededed; */
+  background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
   transition: all 1.5s;
   font-size: 16px;
 }
@@ -29,17 +28,15 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 31px;
-  
-
-transition: all 1.5s;
+  transition: all 1.5s;
 }
 
-.container-light {
+.light-container {
   background: #faecec;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-/* header  block starts */
+/* Header */
 header {
   min-height: 2.5rem;
   display: flex;
@@ -69,20 +66,20 @@ header {
   font-family: 'Cantarell', sans-serif;
 }
 
-#user-label {
+#user_label {
   position: absolute;
   width: 40%;
   top: 75px;
   left: 10px;
 }
 
-#computer-label {
+#computer_label {
   position: absolute;
   top: 75px;
   right: 10px;
 }
 
-/* main part starts (the icon)*/
+/* Main Part (icons)*/
 .main-part {
   width: 90%;
   margin: auto;
@@ -92,7 +89,6 @@ header {
 }
 .main-part button {
   background-color: rgb(167, 68, 174);
-  
   color: white;
   border: none;
   font-size: 4rem;
@@ -103,17 +99,20 @@ header {
   cursor: pointer;
 }
 
+#btn:hover {
+  background-color: rgb(108, 58, 112);
+}
 
-/* Last part starts here */
-.last-part {
+
+/* Live Update */
+.live-update {
   margin-top: 3rem;
   text-align: center;
 }
 #result {
   width: 15rem;
   padding: 1rem 0;
-  margin: 2.5rem auto;
-  /* by giving auto it will automatically come to the center */
+  margin: 2.5rem auto; /* auto - will automatically come to the center */
   font-weight: 700;
   letter-spacing: 0.7px;
   text-transform: uppercase;
@@ -143,7 +142,7 @@ span {
   font-family: Lato, sans-serif;
 }
 
-/* FOr responsive */
+/* Responsive */
 
 @media only screen and (max-width: 680px) {
   .container {
@@ -173,10 +172,9 @@ span {
     height: 5.8rem;
     width: 5.8rem;
     border-radius: 50%;
-    /* margin: 10px; */
   }
 
-  .last-part {
+  .live-update {
     margin-top: 2rem;
   }
 
@@ -184,7 +182,6 @@ span {
     width: 10rem;
     padding: 0.7rem 0;
     margin: 2.1rem auto;
-    /* by giving auto it will automatically come to the center */
     font-weight: 700;
     letter-spacing: 0.5px;
   }
@@ -202,11 +199,10 @@ span {
     height: 4.3rem;
     width: 4.3rem;
     border-radius: 50%;
-    /* margin: 10px; */
     margin: 2px;
   }
 
-  .last-part {
+  .live-update {
     margin-top: 2rem;
   }
 
@@ -214,7 +210,6 @@ span {
     width: 6rem;
     padding: 0.5rem 0;
     margin: 1.8rem auto;
-    /* by giving auto it will automatically come to the center */
     font-size: 0.6rem;
     font-weight: 700;
     letter-spacing: 0.2px;
@@ -225,17 +220,17 @@ span {
 }
 
 
-/* ?  Footer part starts */
+/* Footer */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .footer {
   left: 0;
   bottom: 0;
   margin-top: auto;
+  margin-bottom: 10px;
 }
 .footer p {
   font-size: 1.2rem;
@@ -246,7 +241,6 @@ body {
 }
 .footer p span {
   background-image: linear-gradient(315deg, #8a4fbe 0%, #cb38e2 74%);
-
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
 }

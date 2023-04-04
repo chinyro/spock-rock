@@ -7,7 +7,7 @@
 const result = document.getElementById("result");
 const userChoice = document.getElementById("userChoice");
 const compChoice = document.getElementById("compChoice");
-const mainPart = document.getElementById("main-game-section");
+const mainPart = document.getElementById("main-game");
 const mainButton = document.getElementById("btn");
 
 let [comp_score, user_score] = [0,0];
@@ -51,28 +51,25 @@ let gameRules = {
 }
 
 
-
 function winCondition() {
     if(user_score === 5) {
         alert('GAME OVER - YOU WON!! You are the best, CONGRATULATIONS!!!');
         mainPart.style.pointerEvents = 'none';
-        
     } else if(comp_score === 5) {
         alert('GAME OVER - Computer Wins, Maybe next time human!!!');
         mainPart.style.pointerEvents = 'none';
     } 
  }
 
-
+//When user clicks generate a random choice
 function clicked(user) {
     let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
     let randomNumber = Math.floor(Math.random() * 5);
     let comp_choice = choices[randomNumber];
-
+    //Display choices
     userChoice.textContent = `Computer chose ${comp_choice.toUpperCase()}`; 
     compChoice.textContent = `You chose ${user.toUpperCase()}`;
-
-    console.log('user', user, 'comp-choice', comp_choice);
+    //Compare computer vs user choice
     switch(gameRules[comp_choice][user]) {
         case 'win':
             result.textContent = 'You win';
@@ -86,7 +83,7 @@ function clicked(user) {
             break;
         case 'tie':
             result.textContent = 'It is a Tie';
-            result.style.cssText = "background-color: rgb(102, 102, 102)";
+            result.style.cssText = "background-color: rgb(80, 182, 192)";
             break;
         }
         winCondition();
@@ -98,6 +95,7 @@ function clicked(user) {
 
 
 //  local storage and updating score
+//Update the score
 const setLocalStorageData = () => {
     document.getElementById('comp_score').textContent = localStorage.getItem('compInputValue');
     document.getElementById('user_score').textContent = localStorage.getItem('userInputValue'); 

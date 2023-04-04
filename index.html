@@ -11,25 +11,25 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.animate.min.css"/> -->
 </head>
 <body>
-    <div class="container container-light">
+    <div class="container light-container">
         <header>
             <div class="score-table">
-                <p id="user-label" class="badge">YOU</p>
-                <p id="computer-label" class="badge">COMPUTER</p>
+                <p id="user_label" class="badge">YOU</p>
+                <p id="computer_label" class="badge">COMPUTER</p>
                 <span id="user_score">0</span> : <span id="comp_score">0</span>
             </div>
         </header>
 
-        <div class="main-part" id="main-game-section">
+        <div class="main-part" id="main-game">
             <button title="Rock" onclick="clicked('Rock')" id="btn"><i class="far fa-hand-rock"></i></button>
             <button title="Paper" onclick="clicked('Paper')" id="btn"><i class="far fa-hand-paper"></i></button>
             <button title="Scissors" onclick="clicked('Scissors')" id="btn"><i class="far fa-hand-scissors"></i></button>
             <button title="Lizard" onclick="clicked('Lizard')" id="btn"><i class="far fa-hand-lizard"></i></button>
             <button title="Spock" onclick="clicked('Spock')" id="btn"><i class="far fa-hand-spock"></i></button>
         </div>
-        <div class="last-part">
-            <p class="choosing-part-comp p-light" id="compChoice"></p>
-            <p class="choosing-part-user p-light" id="userChoice"></p>
+        <div class="live-update">
+            <p class="choosing-part-comp" id="compChoice"></p>
+            <p class="choosing-part-user" id="userChoice"></p>
             <p id="result"></p>
             <button class="refresh" type="submit"  onClick="refreshPage()">Try Again!!</button>
         </div>          
@@ -41,23 +41,6 @@
     </div>
 
 
-    <!-- ? For general popup message
-    <div id="generalPopup" class="general-popup">
-        <div class="blank-div"></div>
-        <div class="general-div">
-            <div class="popup-content-general">
-                <p class="genral-popup-text">You <span>Won</span> the match🥳</p>
-                <button class="close closeBtn general-close-btn">OK</button>
-            </div >
-        </div>
-    </div> -->
-
-
     <script src="script.js"></script>
-
-
-    <!-- for ionion icon -->
-    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>     -->
 </body>
 </html>
