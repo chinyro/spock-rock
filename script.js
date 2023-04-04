@@ -7,6 +7,8 @@
 const result = document.getElementById("result");
 const userChoice = document.getElementById("userChoice");
 const compChoice = document.getElementById("compChoice");
+const mainPart = document.getElementById("main-game-section");
+const mainButton = document.getElementById("btn");
 
 let [comp_score, user_score] = [0,0];
 
@@ -48,25 +50,19 @@ let gameRules = {
     }
 }
 
-function refreshPage() {
-    window.location.reload();
- }
 
-//  function button() {
-//     button.disabled = false;
-//  }
 
- function winCondition() {
-    if(user_score === 10) {
+function winCondition() {
+    if(user_score === 5) {
         alert('GAME OVER - YOU WON!! You are the best, CONGRATULATIONS!!!');
-    } else if(comp_score === 10) {
+        mainPart.style.pointerEvents = 'none';
+        
+    } else if(comp_score === 5) {
         alert('GAME OVER - Computer Wins, Maybe next time human!!!');
+        mainPart.style.pointerEvents = 'none';
     } 
  }
 
- function button() {
-    button.disabled = true;
- }
 
 function clicked(user) {
     let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
@@ -103,11 +99,14 @@ function clicked(user) {
 
 //  local storage and updating score
 const setLocalStorageData = () => {
-    document.getElementById('comp_score').innerHTML = localStorage.getItem('compInputValue');
-    document.getElementById('user_score').innerHTML = localStorage.getItem('userInputValue'); 
+    document.getElementById('comp_score').textContent = localStorage.getItem('compInputValue');
+    document.getElementById('user_score').textContent = localStorage.getItem('userInputValue'); 
   } 
 //   setLocalStorageData(); 
+
 
   function refreshPage() {
     window.location.reload();
  }
+
+ 
