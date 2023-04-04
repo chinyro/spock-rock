@@ -51,9 +51,9 @@ header {
   border: 5px solid #8b2781;
   border-radius: 4px;
   text-align: center;
-  width: 200px;
+  width: 300px;
   margin: 20px auto;
-  color: rgb(170, 37, 214);
+  color: rgb(93, 90, 94);
   font-size: 40px;
   padding: 15px 20px;
   font-family: 'Cantarell', sans-serif;
@@ -61,7 +61,7 @@ header {
 }
 
 .badge {
-  background: #8b2781;
+  background: rgb(167, 68, 174);
   border-radius: 3px;
   color: white;
   font-size: 14px;
@@ -91,8 +91,8 @@ header {
   justify-content: space-around;
 }
 .main-part button {
-  background-color: rgb(242,48,235);
-  background: linear-gradient(4deg, rgba(242,48,235,1) 0%, rgba(149,117,204,1) 48%, rgba(41,196,169,1) 100%);
+  background-color: rgb(167, 68, 174);
+  
   color: white;
   border: none;
   font-size: 4rem;
@@ -126,7 +126,7 @@ header {
 }
 span {
   font-weight: 900;
-  font-size: 20px;
+  margin-left: 10px;
 }
 
 .refresh {
@@ -242,7 +242,7 @@ body {
   text-align: center;
 }
 .footer p i {
-  color: red;
+  color: rgb(145, 33, 198);
 }
 .footer p span {
   background-image: linear-gradient(315deg, #8a4fbe 0%, #cb38e2 74%);
