@@ -68,22 +68,24 @@ function clicked(user) {
     let comp_choice = choices[randomNumber];
     //Display choices
     userChoice.textContent = `Computer chose ${comp_choice.toUpperCase()}`; 
+    userChoice.style.fontWeight = "900";
     compChoice.textContent = `You chose ${user.toUpperCase()}`;
+    compChoice.style.fontWeight = "900";
     //Compare computer vs user choice
     switch(gameRules[comp_choice][user]) {
         case 'win':
             result.textContent = 'You win';
-            result.style.cssText = "background-color: rgb(128, 247, 128)";
+            result.style.cssText = "background-color: rgb(185, 249, 185)";
             user_score++;
             break;
         case 'lose':
             result.textContent = 'You lose';
-            result.style.cssText = "background-color: rgb(240, 124, 124)";
+            result.style.cssText = "background-color: rgb(249, 185, 196)";
             comp_score++;
             break;
         case 'tie':
             result.textContent = 'It is a Tie';
-            result.style.cssText = "background-color: rgb(80, 182, 192)";
+            result.style.cssText = "background-color: rgb(210, 216, 249)";
             break;
         }
         winCondition();

@@ -103,7 +103,6 @@ header {
   background-color: rgb(108, 58, 112);
 }
 
-
 /* Live Update */
 .live-update {
   margin-top: 3rem;
@@ -122,6 +121,7 @@ header {
 #compChoice {
   font-weight: 400;
   margin-bottom: 0.5rem;
+  color: rgb(40, 118, 226);
 }
 span {
   font-weight: 900;
@@ -133,13 +133,18 @@ span {
   margin: 0;
   padding: 10px;
   color: #ecf4f3;
-  border: 5px solid #8b2781;
+  border: 5px solid rgb(167, 68, 174);
   border-radius: 10px;
   text-shadow: 0 1px 1px #bd83ce;
-  background: #8b2781;
+  background: rgb(167, 68, 174);
   font-size: 30px;
   cursor: pointer;
   font-family: Lato, sans-serif;
+}
+
+.refresh:hover {
+  background-color: rgb(108, 58, 112);
+  border: 5px solid rgb(108, 58, 112);
 }
 
 /* Responsive */
